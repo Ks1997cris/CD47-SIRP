@@ -1,0 +1,12 @@
+parm ../sys_sol.prmtop
+trajin ../pr1.nc
+trajin ../pr2.nc
+trajin ../pr3.nc
+trajin ../pr4.nc
+trajin ../pr5.nc
+strip :WAT
+autoimage
+hbond contacts :1-232 avgout avg.dat series uuseries hbond.gnu nointramol
+go
+lifetime contacts[solutehb] out contacts-lifetime.dat
+go
